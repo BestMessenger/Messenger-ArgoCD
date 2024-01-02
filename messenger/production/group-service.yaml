@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: group-service
+  labels:
+    app: messenger
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: messenger
+  template:
+    metadata:
+      name: group-service
+      labels:
+        app: messenger
+    spec:
+      containers:
+        - name: group-service
+          image: denpool/messenger-group-service:0.0.1
+          envFrom:
+            - secretRef:
+                name: group-service-secret
+          imagePullPolicy: IfNotPresent
+      restartPolicy: Always
