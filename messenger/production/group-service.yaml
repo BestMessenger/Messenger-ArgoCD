@@ -19,6 +19,8 @@ spec:
       containers:
         - name: group-service
           image: denpool/messenger-group-service:0.0.1
+          ports:
+            - containerPort: 9000
           envFrom:
             - secretRef:
                 name: group-service-secret
