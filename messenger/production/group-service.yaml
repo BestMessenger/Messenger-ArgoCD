@@ -31,7 +31,7 @@ spec:
               port: 9000
               path: /actuator/health/liveness
           envFrom:
-            - secretRef:
-                name: group-service-secret
+            - configMapRef:
+                name: group-service-config
           imagePullPolicy: IfNotPresent
       restartPolicy: Always
