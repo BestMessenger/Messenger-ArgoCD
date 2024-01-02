@@ -23,7 +23,7 @@ spec:
           ports:
             - containerPort: 9000
           envFrom:
-            - configMapRef:
-                name: group-service-config
+            - secretRef:
+                name: group-service-secret
           imagePullPolicy: IfNotPresent
       restartPolicy: Always
