@@ -22,6 +22,14 @@ spec:
           image: denpool/messenger-group-service:0.0.1
           ports:
             - containerPort: 9000
+          readinessProbe:
+            httpGet:
+              port: 9000
+              path: /actuator/health/readiness
+          livenessProbe:
+            httpGet:
+              port: 9000
+              path: /actuator/health/liveness
           envFrom:
             - secretRef:
                 name: group-service-secret
