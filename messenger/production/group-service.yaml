@@ -16,6 +16,7 @@ spec:
       labels:
         app: messenger
     spec:
+      serviceAccountName: messenger-connector-db
       containers:
         - name: group-service
           image: denpool/messenger-group-service:0.0.1
