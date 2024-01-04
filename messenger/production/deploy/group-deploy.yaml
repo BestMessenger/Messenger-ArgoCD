@@ -4,16 +4,19 @@ metadata:
   name: group-service
   namespace: default
   labels:
-    app: messenger
+    app: group-deploy
+    project: messenger
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: messenger
+      app: group-app
+      project: messenger
   template:
     metadata:
       labels:
-        app: messenger
+        app: group-app
+        project: messenger
     spec:
       containers:
         - name: group-service
@@ -31,6 +34,7 @@ spec:
           envFrom:
             - configMapRef:
                 name: group-service-config
+
         - name: cloud-sql-proxy
           image: gcr.io/cloud-sql-connectors/cloud-sql-proxy:2.8.0
           args:
