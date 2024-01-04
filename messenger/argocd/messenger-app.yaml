@@ -2,15 +2,13 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: messenger
-  finalizers:
-    - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
     name: ''
     namespace: messenger-production
     server: 'https://kubernetes.default.svc'
   source:
-    path: messenger/production
+    path: messenger
     repoURL: 'https://github.com/BestMessenger/Messenger-ArgoCD.git'
     targetRevision: main
     directory:
@@ -21,3 +19,6 @@ spec:
     automated:
       prune: true
       selfHeal: true
+    syncOptions:
+      - CreateNamespace=true
+      - ApplyOutOfSyncOnly=true

@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: group-service
-  namespace: messenger-production
+  namespace: default
   labels:
     app: group-deploy
     project: messenger
