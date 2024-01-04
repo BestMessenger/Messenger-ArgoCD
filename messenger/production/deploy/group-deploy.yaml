@@ -41,11 +41,11 @@ spec:
             runAsNonRoot: true
           resources:
             requests:
-              memory: "1Gi"
-              cpu: "1"
+              memory: "500Mi"
+              cpu: "500m"
             limits:
-              memory: "1Gi"
-              cpu: "1"
+              memory: "500Mi"
+              cpu: "500m"
           volumeMounts:
             - name: service-account-file
               mountPath: /secrets/
