@@ -1,0 +1,57 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: group-service
+  namespace: default
+  labels:
+    app: messenger
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: messenger
+  template:
+    metadata:
+      labels:
+        app: messenger
+    spec:
+      containers:
+        - name: group-service
+          image: denpool/messenger-group-service:0.0.1
+          ports:
+            - containerPort: 9000
+          readinessProbe:
+            httpGet:
+              port: 9000
+              path: /actuator/health/readiness
+          livenessProbe:
+            httpGet:
+              port: 9000
+              path: /actuator/health/liveness
+          envFrom:
+            - configMapRef:
+                name: group-service-config
+        - name: cloud-sql-proxy
+          image: gcr.io/cloud-sql-connectors/cloud-sql-proxy:2.8.0
+          args:
+            - "--port=5432"  # Замените на нужный вам порт
+            - "messenger-410118:europe-central2:messenger"
+            - "--credentials-file=/secrets/service_account.json"
+          securityContext:
+            runAsNonRoot: true
+          resources:
+            requests:
+              memory: "1Gi"
+              cpu: "1"
+            limits:
+              memory: "1Gi"
+              cpu: "1"
+          volumeMounts:
+            - name: service-account-file
+              mountPath: /secrets/
+              readOnly: true
+      volumes:
+        - name: service-account-file
+          secret:
+            secretName: service-account-file
+
