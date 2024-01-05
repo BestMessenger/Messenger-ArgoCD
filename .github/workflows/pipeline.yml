@@ -11,7 +11,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Run Number Test
+      - name: Run Number Test1
+        run: echo ${{ github.run_number }}
+
+      - name: Run Number Test2
         run: echo ${{ github.run_number }}
 
 
