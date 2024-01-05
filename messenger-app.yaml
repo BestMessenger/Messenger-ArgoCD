@@ -4,8 +4,7 @@ metadata:
   name: messenger
   namespace: argocd
   annotations:
-    argocd-image-updater.argoproj.io/image-list: docker.io/denpool/messenger-group-service:*
-    argocd-image-updater.argoproj.io/git-readonly-repo-secret-name: git-readonly-secret
+    argocd-image-updater.argoproj.io/image-list: denpool/messenger-group-service:~v1
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
