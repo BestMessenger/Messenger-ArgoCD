@@ -18,7 +18,7 @@ spec:
     targetRevision: main
     directory:
       recurse: true
-  sources: [ ]
+  sources: []
   project: default
   syncPolicy:
     automated:
