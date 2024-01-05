@@ -5,7 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5cbe3d8e-c183-4269-b0e3-739cf1b8020a" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/messenger/argocd/messenger-app.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/messenger/argocd/messenger-app.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/messenger/production/group-service/group-kustomize.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/messenger/production/group-service/kustomization.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,7 +85,7 @@
       <workItem from="1704207082505" duration="8221000" />
       <workItem from="1704295175896" duration="7873000" />
       <workItem from="1704376613202" duration="7663000" />
-      <workItem from="1704452567170" duration="6006000" />
+      <workItem from="1704452567170" duration="6590000" />
     </task>
     <servers />
   </component>
