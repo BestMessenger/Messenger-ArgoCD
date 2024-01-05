@@ -4,4 +4,4 @@ resources:
   - group-deploy.yaml
 images:
   - name: group-service
-    newTag: v13
+    newTag: 13
