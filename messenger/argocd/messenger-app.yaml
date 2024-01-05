@@ -1,19 +1,25 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: messenger
+  name: messenger-test
+  namespace: argocd
+  annotations:
+    argocd-image-updater.argoproj.io/image-list: docker.io/denpool/messenger-group-service:*
+    argocd-image-updater.argoproj.io/git-readonly-repo-secret-name: git-readonly-secret
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
     name: ''
-    namespace: messenger-production
+    namespace: default
     server: 'https://kubernetes.default.svc'
   source:
-    path: messenger
+    path: messenger/production
     repoURL: 'https://github.com/BestMessenger/Messenger-ArgoCD.git'
     targetRevision: main
     directory:
       recurse: true
-  sources: []
+  sources: [ ]
   project: default
   syncPolicy:
     automated:
@@ -22,3 +28,5 @@ spec:
     syncOptions:
       - CreateNamespace=true
       - ApplyOutOfSyncOnly=true
+      - PrunePropagationPolicy=foreground
+      - PruneLast=true
