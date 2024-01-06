@@ -1,3 +1,4 @@
 kustomize:
   images:
   - denpool/messenger-group-service:15
+  - denpool/messenger-lastseen-service:2
