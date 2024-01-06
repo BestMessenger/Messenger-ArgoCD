@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5cbe3d8e-c183-4269-b0e3-739cf1b8020a" name="Changes" comment="" />
+    <list default="true" id="5cbe3d8e-c183-4269-b0e3-739cf1b8020a" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/messenger/argocd/kustomization.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/messenger/argocd/kustomization.yaml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -106,7 +108,7 @@
       <workItem from="1704452567170" duration="7052000" />
       <workItem from="1704546139176" duration="324000" />
       <workItem from="1704552122247" duration="95000" />
-      <workItem from="1704552227886" duration="5921000" />
+      <workItem from="1704552227886" duration="6179000" />
     </task>
     <task id="LOCAL-00001" summary="test pipeline">
       <option name="closed" value="true" />
