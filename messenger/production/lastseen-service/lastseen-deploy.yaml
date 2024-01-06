@@ -35,7 +35,7 @@ spec:
             - configMapRef:
                 name: lastseen-service-config
 
-        - name: cloud-sql-proxy
+        - name: lastseen-cloud-sql-proxy
           image: gcr.io/cloud-sql-connectors/cloud-sql-proxy:2.8.0
           args:
             - "--port=5432"
