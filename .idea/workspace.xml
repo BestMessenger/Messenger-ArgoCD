@@ -5,7 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5cbe3d8e-c183-4269-b0e3-739cf1b8020a" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/messenger/production/group-service/kustomization.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/messenger/production/group-service/kustomization.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/messenger/argocd/messenger-app.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/messenger/argocd/messenger-app.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/messenger/argocd/repository-secret.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/messenger/argocd/repository-secret.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -108,7 +110,7 @@
       <workItem from="1704452567170" duration="7052000" />
       <workItem from="1704546139176" duration="324000" />
       <workItem from="1704552122247" duration="95000" />
-      <workItem from="1704552227886" duration="2433000" />
+      <workItem from="1704552227886" duration="3523000" />
     </task>
     <task id="LOCAL-00001" summary="test pipeline">
       <option name="closed" value="true" />
