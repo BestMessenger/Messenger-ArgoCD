@@ -3,5 +3,8 @@ namespace: default
 images:
   - name: denpool/messenger-group-service
     newTag: "13"
+  - name: denpool/messenger-lastseen-service
+    newTag: "1"
 resources:
   - ../../messenger/production/group-service
+  - ../../messenger/production/lastseen-service
