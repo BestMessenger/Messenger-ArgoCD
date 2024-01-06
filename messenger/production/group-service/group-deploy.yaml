@@ -20,7 +20,7 @@ spec:
     spec:
       containers:
         - name: group-service
-          image: denpool/messenger-group-service
+          image: denpool/messenger-group-service:13
           ports:
             - containerPort: 9000
           readinessProbe:
