@@ -1,6 +1,6 @@
 ---
 metadata:
-  name: group-kustomize
+  name: lastseen-kustomize
 resources:
   - lastseen-deploy.yaml
   - namespace.yaml
