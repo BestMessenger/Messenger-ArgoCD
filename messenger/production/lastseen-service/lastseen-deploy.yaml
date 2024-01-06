@@ -22,14 +22,14 @@ spec:
         - name: lastseen-service
           image: denpool/messenger-lastseen-service
           ports:
-            - containerPort: 9000
+            - containerPort: 5000
           readinessProbe:
             httpGet:
-              port: 9000
+              port: 5000
               path: /actuator/health/readiness
           livenessProbe:
             httpGet:
-              port: 9000
+              port: 5000
               path: /actuator/health/liveness
           envFrom:
             - configMapRef:
