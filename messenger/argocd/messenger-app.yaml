@@ -15,7 +15,7 @@ spec:
     namespace: default
     server: 'https://kubernetes.default.svc'
   source:
-    path: messenger/production
+    path: messenger
     repoURL: 'https://github.com/BestMessenger/Messenger-ArgoCD.git'
     targetRevision: main
     directory:
