@@ -3,4 +3,4 @@ metadata:
   name: group-kustomize
 resources:
   - group-deploy.yaml
-  - group-namespace.yaml
+  - namespace.yaml
