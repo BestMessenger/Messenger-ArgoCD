@@ -2,6 +2,6 @@
 namespace: staging
 images:
   - name: denpool/messenger-group-service
-    newTag: 13
+    newTag: "13"
 resources:
   - ../../messenger/production/group-service
