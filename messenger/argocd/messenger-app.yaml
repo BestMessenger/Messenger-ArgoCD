@@ -1,10 +1,12 @@
+---
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: messenger
   namespace: argocd
   annotations:
-    argocd-image-updater.argoproj.io/image-list: denpool/messenger-group-service:~v1
+    argocd-image-updater.argoproj.io/image-list: denpool/messenger-group-service:>=13
+    argocd-image-updater.argoproj.io/write-back-method: git
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:

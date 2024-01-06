@@ -1,7 +1,8 @@
+---
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
+metadata:
+  namespace: group-kustomize
 resources:
-  - ./group-deploy.yaml
-images:
-  - name: group-service
-    newTag: v13
+  - group-deploy.yaml
+  - group-namespace.yaml

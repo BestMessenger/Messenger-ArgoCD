@@ -20,7 +20,7 @@ spec:
     spec:
       containers:
         - name: group-service
-          image: denpool/messenger-group-service:0.0.2
+          image: denpool/messenger-group-service
           ports:
             - containerPort: 9000
           readinessProbe:
@@ -38,7 +38,7 @@ spec:
         - name: cloud-sql-proxy
           image: gcr.io/cloud-sql-connectors/cloud-sql-proxy:2.8.0
           args:
-            - "--port=5432"  # Замените на нужный вам порт
+            - "--port=5432"
             - "messenger-410118:europe-central2:messenger"
             - "--credentials-file=/secrets/service_account.json"
           securityContext:
