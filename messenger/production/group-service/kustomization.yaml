@@ -1,7 +1,6 @@
 ---
-kind: Kustomization
 metadata:
-  namespace: group-kustomize
+  name: group-kustomize
 resources:
   - group-deploy.yaml
   - group-namespace.yaml
