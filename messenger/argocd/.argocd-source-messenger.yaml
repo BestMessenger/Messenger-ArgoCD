@@ -1,0 +1,3 @@
+kustomize:
+  images:
+  - denpool/messenger-group-service:14
