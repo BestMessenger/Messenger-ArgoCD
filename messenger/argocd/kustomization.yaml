@@ -8,7 +8,7 @@ images:
   - name: denpool/messenger-profile-service
     newTag: "1"
   - name: denpool/messenger-storage-service
-    newTag: "1"
+    newTag: "2"
 resources:
   - ../../messenger/production/group-service
   - ../../messenger/production/lastseen-service
