@@ -41,8 +41,3 @@ spec:
             limits:
               memory: "300Mi"
               cpu: "300m"
-          volumeMounts:
-            - name: service-account-file
-              mountPath: /secrets/
-              readOnly: true
-
