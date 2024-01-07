@@ -20,7 +20,7 @@ spec:
     spec:
       containers:
         - name: storage-service
-          image: denpool/messenger-profile-service
+          image: denpool/messenger-storage-service
           ports:
             - containerPort: 6000
           readinessProbe:
