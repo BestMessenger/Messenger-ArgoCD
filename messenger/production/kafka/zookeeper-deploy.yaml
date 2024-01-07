@@ -5,7 +5,6 @@ metadata:
   labels:
     app: zookeeper
   name: zookeeper
-  namespace: kafka
 spec:
   replicas: 1
   selector:

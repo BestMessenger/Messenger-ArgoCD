@@ -4,7 +4,6 @@ metadata:
   labels:
     app: kafka-broker
   name: kafka-broker
-  namespace: kafka
 spec:
   replicas: 1
   selector:
