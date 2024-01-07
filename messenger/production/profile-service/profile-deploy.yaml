@@ -1,0 +1,61 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: profile-deployment
+  labels:
+    app: profile-deploy
+    project: messenger
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: profile-app
+      project: messenger
+  template:
+    metadata:
+      labels:
+        app: profile-app
+        project: messenger
+    spec:
+      containers:
+        - name: profile-service
+          image: denpool/messenger-profile-service
+          ports:
+            - containerPort: 3333
+          readinessProbe:
+            httpGet:
+              port: 3333
+              path: /actuator/health/readiness
+          livenessProbe:
+            httpGet:
+              port: 3333
+              path: /actuator/health/liveness
+          envFrom:
+            - configMapRef:
+                name: profile-service-config
+
+        - name: profile-cloud-sql-proxy
+          image: gcr.io/cloud-sql-connectors/cloud-sql-proxy:2.8.0
+          args:
+            - "--port=5432"
+            - "messenger-410118:europe-central2:messenger"
+            - "--credentials-file=/secrets/service_account.json"
+          securityContext:
+            runAsNonRoot: true
+          resources:
+            requests:
+              memory: "500Mi"
+              cpu: "500m"
+            limits:
+              memory: "500Mi"
+              cpu: "500m"
+          volumeMounts:
+            - name: service-account-file
+              mountPath: /secrets/
+              readOnly: true
+      volumes:
+        - name: service-account-file
+          secret:
+            secretName: service-account-file
+

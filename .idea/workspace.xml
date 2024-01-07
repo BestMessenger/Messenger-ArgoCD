@@ -5,7 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5cbe3d8e-c183-4269-b0e3-739cf1b8020a" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/messenger/production/profile-service/kustomization.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/messenger/production/profile-service/lastseen-deploy.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/messenger/argocd/kustomization.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/messenger/argocd/kustomization.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,7 +53,7 @@
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "main",
     "jdk.selected.JAVA_MODULE": "20",
-    "last_opened_file_path": "/Users/denpool/IdeaProjects/Bank_App/Messenger-ArgoCD",
+    "last_opened_file_path": "/Users/denpool/IdeaProjects/Bank_App/Messenger-ArgoCD/messenger/profile-service",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -69,6 +72,9 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/messenger/profile-service" />
+      <recent name="$PROJECT_DIR$/messenger/argocd" />
+      <recent name="$PROJECT_DIR$/messenger/production/lastseen-service" />
       <recent name="$PROJECT_DIR$" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -78,21 +84,6 @@
       <recent name="$PROJECT_DIR$/messenger/group-service" />
       <recent name="$PROJECT_DIR$/messenger/production/deploy" />
     </key>
-  </component>
-  <component name="RunManager">
-    <configuration default="true" type="JetRunConfigurationType">
-      <module name="Messenger-ArgoCD" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
-      <module name="Messenger-ArgoCD" />
-      <option name="filePath" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -108,7 +99,9 @@
       <workItem from="1704452567170" duration="7052000" />
       <workItem from="1704546139176" duration="324000" />
       <workItem from="1704552122247" duration="95000" />
-      <workItem from="1704552227886" duration="7033000" />
+      <workItem from="1704552227886" duration="9803000" />
+      <workItem from="1704631168740" duration="675000" />
+      <workItem from="1704632143151" duration="3033000" />
     </task>
     <task id="LOCAL-00001" summary="test pipeline">
       <option name="closed" value="true" />
