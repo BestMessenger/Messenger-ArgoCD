@@ -36,8 +36,8 @@ spec:
                 name: storage-service-config
           resources:
             requests:
-              memory: "300Mi"
-              cpu: "300m"
+              memory: "400Mi"
+              cpu: "400m"
             limits:
-              memory: "300Mi"
-              cpu: "300m"
+              memory: "400Mi"
+              cpu: "400m"
