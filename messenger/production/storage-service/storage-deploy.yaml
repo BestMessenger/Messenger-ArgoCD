@@ -1,0 +1,37 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: storage-deployment
+  labels:
+    app: storage-deploy
+    project: messenger
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: storage-app
+      project: messenger
+  template:
+    metadata:
+      labels:
+        app: storage-app
+        project: messenger
+    spec:
+      containers:
+        - name: storage-service
+          image: denpool/messenger-profile-service
+          ports:
+            - containerPort: 6000
+          readinessProbe:
+            httpGet:
+              port: 6000
+              path: /actuator/health/readiness
+          livenessProbe:
+            httpGet:
+              port: 6000
+              path: /actuator/health/liveness
+          envFrom:
+            - configMapRef:
+                name: storage-service-config
+
