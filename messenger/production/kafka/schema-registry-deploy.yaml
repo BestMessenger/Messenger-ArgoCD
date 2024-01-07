@@ -8,7 +8,7 @@ spec:
   replicas: 1
   selector:
     matchLabels:
-      app: messenger
+      app: schema-registry
   template:
     metadata:
       name: schema-registry
