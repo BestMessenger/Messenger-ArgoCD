@@ -14,3 +14,4 @@ resources:
   - ../../messenger/production/lastseen-service
   - ../../messenger/production/profile-service
   - ../../messenger/production/storage-service
+  - ../../messenger/production/kafka

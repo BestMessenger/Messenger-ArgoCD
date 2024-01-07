@@ -1,0 +1,8 @@
+---
+metadata:
+  name: kafka-kustomize
+resources:
+  - kafka-pod.yaml
+  - kafka-service.yaml
+  - zookeeper-pod.yaml
+  - zookeeper-service.yaml
