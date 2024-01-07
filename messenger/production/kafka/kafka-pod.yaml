@@ -18,7 +18,7 @@ spec:
           image: confluentinc/cp-enterprise-kafka:5.5.3
           env:
             - name: KAFKA_ZOOKEEPER_CONNECT
-              value: "10.116.8.42:2181"
+              value: "zookeeper-service:2181"
             - name: KAFKA_ADVERTISED_LISTENERS
               value: "PLAINTEXT://kafka:9092"
             - name: KAFKA_BROKER_ID
