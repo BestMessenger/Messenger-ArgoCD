@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: schema-registry-service
+spec:
+  selector:
+    app: schema-registry-service
+  ports:
+    - name: zookeeper-port
+      port: 8081
+      nodePort: 30181
+      targetPort: 8081
+  type: NodePort
+  

@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: schema-registry
+  labels:
+    app: schema-registry
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: messenger
+  template:
+    metadata:
+      name: schema-registry
+      labels:
+        app: schema-registry
+    spec:
+      containers:
+        - name: schema-registry
+          image: confluentinc/cp-schema-registry:5.5.3
+          env:
+            - name: SCHEMA_REGISTRY_KAFKASTORE_CONNECTION_URL
+              value: zookeeper-service:2181
+            - name: SCHEMA_REGISTRY_HOST_NAME
+              value: schema-registry
+            - name: SCHEMA_REGISTRY_LISTENERS
+              value: http://schema-registry:8081,http://localhost:8081
+          imagePullPolicy: IfNotPresent
+      restartPolicy: Always
+      

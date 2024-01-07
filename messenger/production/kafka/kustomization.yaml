@@ -6,3 +6,5 @@ resources:
   - kafka-service.yaml
   - zookeeper-deploy.yaml
   - zookeeper-service.yaml
+  - schema-registry-deploy.yaml
+  - schema-registry-service.yaml
