@@ -23,16 +23,6 @@ spec:
           image: denpool/messenger-storage-service
           ports:
             - containerPort: 6000
-          readinessProbe:
-            httpGet:
-              port: 6000
-              path: /actuator/health/readiness
-            initialDelaySeconds: 50
-          livenessProbe:
-            httpGet:
-              port: 6000
-              path: /actuator/health/liveness
-            initialDelaySeconds: 50
           envFrom:
             - configMapRef:
                 name: storage-service-config
