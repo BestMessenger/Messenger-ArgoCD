@@ -3,4 +3,4 @@ kustomize:
   - denpool/messenger-group-service:15
   - denpool/messenger-lastseen-service:2
   - denpool/messenger-profile-service:1
-  - denpool/messenger-storage-service:3
+  - denpool/messenger-storage-service:4
